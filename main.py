@@ -15,7 +15,7 @@ async def on_message(message):
     return
 
   if message.content.startswith('!price'):
-    await message.channel.send(price_request())
+    await message.channel.send("Current price: $"+price_request())
     await message.channel.send("THIS IS NOT AN OFFICIAL BOT")
 
 client.run(os.getenv('TOKEN'))
